@@ -1,7 +1,6 @@
 
 
-header { border-bottom: 2px solid white; 
-	     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5); }
+header { border-bottom: 2px solid white;}
 
 header:first-child { padding: 10px;
 					 font-size: 25px;
@@ -43,7 +42,8 @@ button:focus { outline: 0px; }
 
 div main { text-align: center; }
 
-div main button {  transition: All linear 0.2s; }
+div main button { filter: opacity(60%); 
+				  transition: All linear 0.2s; }
 
 div main img { width: 100;
 			   height: 80;
@@ -51,7 +51,8 @@ div main img { width: 100;
 			   text-align: center;}
 
 
-div main button:hover { transform: scale(1.1,1.1); }
+div main button:hover { transform: rotate(20deg);
+						filter: opacity(100%); }
 
 #piedra { background: url('../img/iconos.png') 512px; }
 #papel { background: url('../img/iconos.png') 652px; }
