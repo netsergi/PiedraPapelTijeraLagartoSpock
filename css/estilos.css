@@ -31,6 +31,11 @@ main { margin: 40px auto;
 	   background-color: white;
 	    }
 
+main div { border: 1px dotted black;
+		   margin: 10px auto;
+		   width: 600px;
+		   height:60px; }
+
 button { width: 137px; 
 		 height: 135px; 
 		 border-radius: 80px; 
