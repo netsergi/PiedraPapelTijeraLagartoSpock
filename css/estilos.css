@@ -57,7 +57,7 @@ div main img { width: 100;
 
 
 div main button:hover { transform: rotate(20deg);
-						filter: opacity(100%); }
+		        filter: opacity(100%); }
 
 #piedra { background: url('../img/iconos.png') 512px; }
 #papel { background: url('../img/iconos.png') 652px; }
