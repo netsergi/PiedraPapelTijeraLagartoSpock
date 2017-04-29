@@ -31,7 +31,7 @@ main { margin: 40px auto;
 	   background-color: white;
 	    }
 
-main div { border: 1px dotted black;
+main div { //border: 1px dotted black;
 		   margin: 10px auto;
 		   width: 600px;
 		   height:200px; }
@@ -47,7 +47,7 @@ button:focus { outline: 0px; }
 
 div main { text-align: center; }
 
-div main button { filter: opacity(60%); 
+div main button { filter: grayscale(20%); 
 				  transition: All linear 0.2s; }
 
 div main img { width: 100;
@@ -57,9 +57,14 @@ div main img { width: 100;
 
 
 div main button:hover { transform: rotate(20deg);
-		        filter: opacity(100%); }
+		        filter: grayscale(0%); }
 
-#pc { width: 137px; height: 135px; display: block;}
+#pc, #jugador { width: 131px; height: 132px; display: block;
+	  border-radius: 100px;
+	  box-shadow: 3px 3px 3px #ccc; }
+
+#jugador { float: right; }
+#pc { float: left; }
 
 #piedra { background: url('../img/iconos.png') 512px; }
 #papel { background: url('../img/iconos.png') 652px; }
