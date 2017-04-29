@@ -34,7 +34,7 @@ main { margin: 40px auto;
 main div { border: 1px dotted black;
 		   margin: 10px auto;
 		   width: 600px;
-		   height:60px; }
+		   height:200px; }
 
 button { width: 137px; 
 		 height: 135px; 
@@ -58,6 +58,8 @@ div main img { width: 100;
 
 div main button:hover { transform: rotate(20deg);
 		        filter: opacity(100%); }
+
+#pc { width: 137px; height: 135px; display: block;}
 
 #piedra { background: url('../img/iconos.png') 512px; }
 #papel { background: url('../img/iconos.png') 652px; }

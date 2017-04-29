@@ -12,7 +12,8 @@
 			<div id="tit"> Piedra, Papel, Tijera, Lagarto, Spock </div>
 		</header>
 		<main>
-			<div>h	
+			<div>
+				<div id="pc"></div>
 			</div>
 			<br>
 			<br>
@@ -26,9 +27,33 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-			$("button").click()
+		$('button').click(function(){
+
+			 jugada(this);
+
+		});
+
+		function jugada(ele)
+		{
+			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
+			var pc_jugada = jugadas[Math.floor((Math.random() * 1))];
+			switch (ele.id)
+			{
+				case 'piedra':
+					switch (pc_jugada)
+					{
+						case 'piedra':
+							$('#pc').fadeTo(500,0.9, function(){
+
+								$('#pc').css("background","url('../img/iconos.png') 512px");});
+						break;
+					}
 
 
+
+				break;
+			}
+		}
 
 	});
 
