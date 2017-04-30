@@ -42,21 +42,29 @@
 		function jugada(ele)
 		{
 			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
-			var pc_jugada = jugadas[Math.floor((Math.random() * 1))];
+			var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
 			switch (ele.id)
 			{
 				case 'piedra':
 					switch (pc_jugada)
 					{
 						case 'piedra':
-							$('#pc').show(500, function(){
-
+							pc.show(500, function(){
 								pc.css("background","url('../img/iconos.png') 508px");
 								jugador.css("background","url('../img/iconos.png') 508px");
 								pc.css("transition","all linear 0.6s"); 
 								pc.css("transform","rotate(20deg)"); 
 							});
 						break;
+						case 'papel':
+							pc.show(500, function(){
+								pc.css("background","url('../img/iconos.png') 652px");
+								jugador.css("background","url('../img/iconos.png') 508px");
+								pc.css("transition","all linear 0.6s"); 
+								pc.css("transform","rotate(20deg)"); 
+							});
+						break;
+
 					}
 
 
