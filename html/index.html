@@ -14,7 +14,7 @@
 		</header>
 		<main>
 			<div>
-				<div id="pc"></div><div id="jugador"></div>
+				<div id="pc"></div><div id="res"></div><div id="jugador"></div>
 			</div>
 			<br>
 			<br>
@@ -30,8 +30,10 @@
 
 		var pc = $('#pc');
 		var jugador = $('#jugador');
+		var res = $('#res');
 
-		pc.hide()
+		pc.hide();
+		res.hide();
 		
 		$('button').click(function(){
 
@@ -43,7 +45,7 @@
 		{
 			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
 			var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
-			switch (ele.id)
+			switch (ele.id) 
 			{
 				case 'piedra':
 					switch (pc_jugada)
@@ -52,15 +54,21 @@
 							pc.show(500, function(){
 								pc.css("background","url('../img/iconos.png') 508px");
 								jugador.css("background","url('../img/iconos.png') 508px");
-								pc.css("transition","all linear 0.6s"); 
+								res.show();
+								res.css("background","url('../img/ok.png') no-repeat ");
+								res.css("background-size","110px 110px");
+								pc.css("transition","all linear 0.3s"); 
 								pc.css("transform","rotate(20deg)"); 
 							});
 						break;
 						case 'papel':
 							pc.show(500, function(){
-								pc.css("background","url('../img/iconos.png') 652px");
+								pc.css("background","url('../img/iconos.png') 649px");
 								jugador.css("background","url('../img/iconos.png') 508px");
-								pc.css("transition","all linear 0.6s"); 
+								res.show();
+								res.css("background","url('../img/ko.png')center  no-repeat ");
+								res.css("background-size","110px 110px");
+								pc.css("transition","all linear 0.3s"); 
 								pc.css("transform","rotate(20deg)"); 
 							});
 						break;
