@@ -1,6 +1,6 @@
 
 
-
+body { background-color: black; }
 
 header:first-child { padding: 0px;
 					 font-size: 25px;
@@ -8,7 +8,7 @@ header:first-child { padding: 0px;
 					 height: 150px;}
 
 #cuerpo { width: 1100px; 
-			border: 10px solid white; 
+			border: 10px solid lightyellow; 
 			height: 800px; 
 			background: url('../img/fondo web2.jpg') no-repeat center center;
 		   	background-size: cover;
@@ -19,7 +19,8 @@ header:first-child { padding: 0px;
 #tit { 
 	   width: 800px; height: 150px;
 	   padding: 0px 0px 0px 20px;
-	   font-family: "Comic Sans MS", "Comic Sans", cursive;}
+	   font-family: 'Handlee', cursive;
+	   background: url('../img/sheldontit.png') top left no-repeat;}
 
 main { margin: 40px auto; 
 	   border: 10px solid darkblue;
@@ -81,3 +82,6 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 #lagarto { background: url('../img/iconos.png') 370px; }
 #spock { background: url('../img/iconos.png') 227px; }
 
+.txttit { margin-left: 200px;
+		  margin-top: 0px; }
+span { display: block; }
