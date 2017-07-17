@@ -1,0 +1,43 @@
+body
+{
+	text-align: center;
+	padding: 20px;
+}
+.fondo 
+{
+	background-color: black;
+	opacity: 0.4;
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	position: fixed;
+	top:0; 
+	left:0;	
+	z-index:2;
+}
+
+.lightbox
+{
+	background-color: white;
+	border: 4px solid black !important;
+	border-radius: 20px;
+	margin: 5% auto;
+	width: 400px;
+	height: 400px;
+	position: relative;
+	opacity: none;
+	z-index: 3
+}
+
+.close {
+	float: right;
+	top: 0px;
+	margin: 10px 10px 0px 0px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+span:hover {
+	background-color: yellow;
+}

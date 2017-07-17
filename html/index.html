@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Piedra, Papel, Tijera, Largarto, Spock</title>
 	<link rel="stylesheet" href="../css/estilos.css">
+	<link rel="stylesheet" href="../css/lightbox.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Handlee|Indie+Flower|Pacifico" rel="stylesheet">
 	
@@ -19,8 +20,14 @@
 				</div>
 			</div>
 		</header>
+		<div class="fondo"></div>
+		<div class="lightbox">
+			<span class="close">X</span>
+			<div id="jugador"></div>
+		</div>
 		<main>
 			<div class="elige">Elige tu jugada:</div>
+			<br>
 			<button id="piedra"></button>
 			<button id="papel"></button>
 			<button id="tijera"></button>
@@ -31,9 +38,14 @@
 <script>
 	$(document).ready(function(){
 
+		$(".fondo,.lightbox").hide();
+	  	$(".close").click(function(){
+	  		$(".fondo,.lightbox").fadeOut("fast");
+	  		}); 
+
 		var pc = $('#pc');
 		var jugador = $('#jugador');
-		var res = $('#res');
+		var res = $('.res');
 
 		pc.hide();
 		res.hide();
@@ -41,6 +53,7 @@
 		$('button').click(function(){
 
 			 jugada(this);
+			 $(".fondo,.lightbox").fadeIn("fast");
 
 		});
 
@@ -65,10 +78,7 @@
 					switch (pc_jugada)
 					{
 						case 'piedra':
-							pc.show(500, function(){
 								resJugada('508px','ok.png');
-							
-							});
 						break;
 						case 'papel':
 							pc.show(500, function(){
