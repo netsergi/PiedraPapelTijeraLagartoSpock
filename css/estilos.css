@@ -1,9 +1,7 @@
-body { margin: 0;
-
-	 }
+body { margin: 0; }
 
 header:first-child { padding: 0px;
-					 font-size: 25px;
+	  				 font-size: 25px;
 					 font-weight: bold; 
 					 height: 150px;}
 
@@ -15,6 +13,7 @@ header:first-child { padding: 0px;
 		   	margin: 0 auto;
 		   	background-color: #006699;
 		   	box-shadow: 1px 4px 4px 4px rgba(0,0,0,0.2);
+		   	text-align: center;
 		}
 
 #tit { 
@@ -69,6 +68,13 @@ main { margin: 60px auto;
 
 }
 
+.imgsheldon {
+				margin-top: 10px;
+				width: 200px;
+				height: 200px;
+				border: 2px solid black; 
+}
+
 button { width: 137px; 
 		 height: 135px; 
 		 border-radius: 80px; 
@@ -98,15 +104,13 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 						 cursor: move;
 						 }		        
 
-#pc, #jugador { width: 131px; height: 132px; display: block;
-	  border-radius: 100px;
-	  box-shadow: 3px 3px 3px #ccc; margin-left: 20px; }
-
-.res { width: 131px; height: 132px; margin-left: 20px; }
-
-
-#jugador { float: right; }
-#pc,.res { float: left;  }
+#pc, #jugador { 
+				width: 131px; 
+				background-color: red;
+				height: 132px; 
+	  			border-radius: 100px;
+	  			box-shadow: 3px 3px 3px #ccc; 
+	  		 }
 
 #piedra { background: url('../img/iconos.png') 512px; }
 #papel { background: url('../img/iconos.png') 652px; }

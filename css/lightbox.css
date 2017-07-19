@@ -1,8 +1,4 @@
-body
-{
-	text-align: center;
-	padding: 20px;
-}
+
 .fondo 
 {
 	background-color: black;
@@ -21,12 +17,13 @@ body
 	background-color: white;
 	border: 4px solid black !important;
 	border-radius: 20px;
-	margin: 5% auto;
+	margin: auto 100px;
 	width: 400px;
 	height: 400px;
-	position: relative;
+	position: absolute;
 	opacity: none;
-	z-index: 3
+	z-index: 3;
+	text-align: center;
 }
 
 .close {

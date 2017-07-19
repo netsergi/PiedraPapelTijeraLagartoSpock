@@ -21,9 +21,10 @@
 			</div>
 		</header>
 		<div class="fondo"></div>
-		<div class="lightbox">
+		<div id="resultado" class="lightbox">
 			<span class="close">X</span>
-			<div id="jugador"></div>
+			<img class="imgsheldon" src="#" />
+			<div id="#pc">gg</div><div id="#jugador">gg</div>
 		</div>
 		<main>
 			<div class="elige">Elige tu jugada:</div>
@@ -37,7 +38,9 @@
 	</div>
 <script>
 	$(document).ready(function(){
-
+		var lbox = $(".lightbox");
+		var pos = screen.width / 2 -  lbox.width();
+		lbox.css({left: + pos});
 		$(".fondo,.lightbox").hide();
 	  	$(".close").click(function(){
 	  		$(".fondo,.lightbox").fadeOut("fast");
@@ -46,9 +49,6 @@
 		var pc = $('#pc');
 		var jugador = $('#jugador');
 		var res = $('.res');
-
-		pc.hide();
-		res.hide();
 		
 		$('button').click(function(){
 
@@ -57,39 +57,35 @@
 
 		});
 
-		function resJugada(posFondopc, resimg)
+		function resJugada(posFondopc,res_img)
 		{
+				$(".imgsheldon").attr("src", res_img);
 				pc.css("background","url('../img/iconos.png') " + posFondopc);
 				jugador.css("background","url('../img/iconos.png') 508px");
-				res.show();
-				res.css("background","url('../img/" + resimg + "') no-repeat ");
-				res.css("background-size","110px 110px");+ posFondopc
 				pc.css("transition","all linear 0.3s"); 
 				pc.css("transform","rotate(20deg)"); 
 		}
 
 		function jugada(ele)
 		{
-			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
-			var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
+			//var jugadas = ["piedra","papel","tijera","lagarto","spock"];
+			var jugadas = ["piedra"];
+			var pc_jugada = jugadas[Math.floor((Math.random() * 1))];
 			switch (ele.id) 
 			{
 				case 'piedra':
 					switch (pc_jugada)
 					{
 						case 'piedra':
-								resJugada('508px','ok.png');
+								resJugada('508px','../img/ganaSheldon.jpg');
 						break;
 						case 'papel':
 							pc.show(500, function(){
-								resjugada('649px','ko.png');
-							
+								resjugada('649px','../img/ganaSheldon.jpg');							
 							});
 						break;
 
 					}
-
-
 
 				break;
 			}
