@@ -70,7 +70,7 @@ main { margin: 60px auto;
 
 .imgsheldon {
 				margin-top: 10px;
-				width: 200px;
+				width: 220px;
 				height: 200px;
 				border: 2px solid black; 
 }
@@ -102,14 +102,34 @@ div main button:hover { transform: rotate(20deg);
 div main button:active { box-shadow: 1px 1px 1px #ccc;
 						 transform: translateY(5px); 
 						 cursor: move;
-						 }		        
+						 }	
 
-#pc, #jugador { 
+
+.marco {
+			
+			border: 1px solid black;
+			width: 200px;
+			margin: 0 auto;
+			text-align: center;
+			display: inline-block;
+}	        
+
+.marcotxt {
+			background-color: green;
+			color: white;
+			padding: 5px;
+			font-family: "Arial";
+			font-weight: bold;
+			text-align: center;
+}
+
+#sheldon, #jugador { 
 				width: 131px; 
 				background-color: red;
 				height: 132px; 
 	  			border-radius: 100px;
-	  			box-shadow: 3px 3px 3px #ccc; 
+	  			box-shadow: 3px 3px 3px #ccc;
+	  			margin: 0 auto;
 	  		 }
 
 #piedra { background: url('../img/iconos.png') 512px; }
@@ -131,3 +151,16 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 		}
 
 span { display: block; }
+
+.txtres {
+			background-color: blue;
+			padding: 10px;
+			font-family: "Arial"; 
+			font-weight: bold;
+			border-radius: 20px;
+			font-size: 20px;
+			box-shadow: 2px 2px 2px 2px #ccc;
+			color: white;
+			width: 400px;
+			margin: 0 auto;
+}

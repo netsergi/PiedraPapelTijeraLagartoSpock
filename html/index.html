@@ -24,7 +24,16 @@
 		<div id="resultado" class="lightbox">
 			<span class="close">X</span>
 			<img class="imgsheldon" src="#" />
-			<div id="#pc">gg</div><div id="#jugador">gg</div>
+			<span class="txtres"></span>
+			<br>
+			<div class="marco">
+				<div id="sheldon"></div>
+				<div class="marcotxt">Sheldon</div>
+			</div>
+			<div class="marco">
+				<div id="jugador"></div>
+				<div class="marcotxt">Tú</div>
+			</div>			
 		</div>
 		<main>
 			<div class="elige">Elige tu jugada:</div>
@@ -39,14 +48,15 @@
 <script>
 	$(document).ready(function(){
 		var lbox = $(".lightbox");
-		var pos = screen.width / 2 -  lbox.width();
-		lbox.css({left: + pos});
+		var posx = ($(window).width() -  lbox.outerWidth()) / 2;
+		var posy = ($(window).height() -  lbox.outerHeight()) / 2;
+		lbox.css({left: + posx, top: + posy});
 		$(".fondo,.lightbox").hide();
 	  	$(".close").click(function(){
 	  		$(".fondo,.lightbox").fadeOut("fast");
 	  		}); 
 
-		var pc = $('#pc');
+		var sheldon = $('#sheldon');
 		var jugador = $('#jugador');
 		var res = $('.res');
 		
@@ -57,32 +67,30 @@
 
 		});
 
-		function resJugada(posFondopc,res_img)
+		function resJugada(posFondopc,res_img,restxt)
 		{
 				$(".imgsheldon").attr("src", res_img);
-				pc.css("background","url('../img/iconos.png') " + posFondopc);
+				$(".txtres").html(restxt);
+				sheldon.css("background","url('../img/iconos.png') " + posFondopc);
 				jugador.css("background","url('../img/iconos.png') 508px");
-				pc.css("transition","all linear 0.3s"); 
-				pc.css("transform","rotate(20deg)"); 
 		}
 
 		function jugada(ele)
 		{
-			//var jugadas = ["piedra","papel","tijera","lagarto","spock"];
-			var jugadas = ["piedra"];
-			var pc_jugada = jugadas[Math.floor((Math.random() * 1))];
+			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
+			//var jugadas = ["piedra"];
+			var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
 			switch (ele.id) 
 			{
 				case 'piedra':
 					switch (pc_jugada)
 					{
 						case 'piedra':
-								resJugada('508px','../img/ganaSheldon.jpg');
+								resJugada('508px','../img/empate.png','Empate!');
+									
 						break;
 						case 'papel':
-							pc.show(500, function(){
-								resjugada('649px','../img/ganaSheldon.jpg');							
-							});
+								resJugada('649px','../img/ganaSheldon.jpg','Sheldon gana!');		
 						break;
 
 					}
