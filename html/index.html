@@ -23,10 +23,12 @@
 			<br>
 			<div class="marco">
 				<div id="sheldon"></div>
+				<br>
 				<div class="marcotxt">Sheldon</div>
 			</div>
 			<div class="marco">
 				<div id="jugador"></div>
+				<br>
 				<div class="marcotxt">Tú</div>
 			</div>			
 		</div>
@@ -42,6 +44,11 @@
 	</div>
 <script>
 	$(document).ready(function(){
+
+		const ganas = "Has ganado a Sheldon!";
+		const pierdes = "Ha ganado Sheldon!";
+		const empate = "Habeis empatado!";
+
 		var lbox = $(".lightbox");
 		var posx = ($(window).width() -  lbox.outerWidth()) / 2;
 		var posy = ($(window).height() -  lbox.outerHeight()) / 2;
@@ -73,27 +80,27 @@
 		function jugada(ele)
 		{
 			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
-			//var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
-			var pc_jugada = 'lagarto';
+			var pc_jugada = jugadas[Math.floor((Math.random() * 5))];
 			switch (ele.id) 
 			{
 				case 'piedra':
 					switch (pc_jugada)
 					{
 						case 'piedra':
-								resJugada('508px','../img/empate.png','Empate!');
-									
+								resJugada('508px','../img/empate.png', empate);					
 						break;
 						case 'papel':
-								resJugada('649px','../img/ganaSheldon.jpg','Sheldon gana!');		
+								resJugada('649px','../img/ganaSheldon.jpg', pierdes);		
 						break;
 						case 'tijera':
-								resJugada('790px','../img/pierdeSheldon.jpg','Has ganado a Sheldon!');		
+								resJugada('790px','../img/pierdeSheldon.png',ganas);		
 						break;
 						case 'lagarto':
-								resJugada('223px','../img/pierdeSheldon.jpg','Has ganado a Sheldon!');		
+								resJugada('366px','../img/pierdeSheldon.png',ganas);
 						break;
-
+						case 'spock':
+								resJugada('223px','../img/ganaSheldon.jpg', pierdes);
+						break;
 					}
 
 				break;

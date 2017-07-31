@@ -126,13 +126,14 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 			text-align: center;
 }
 
+
 #sheldon, #jugador { 
 				width: 131px; 
 				background-color: red;
 				height: 132px; 
 	  			border-radius: 100px;
 	  			box-shadow: 3px 3px 3px #ccc;
-	  			margin: 0 auto;
+	  			margin: 10px auto;
 	  		 }
 
 #piedra { background: url('../img/iconos.png') 512px; }
