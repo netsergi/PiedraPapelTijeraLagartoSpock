@@ -12,10 +12,7 @@
 <body>
 	<div id="cuerpo">
 		<header>
-		<div id="tit">			
-			
-				</div>
-			</div>
+		<div id="tit"></div>
 		</header>
 		<div class="fondo"></div>
 		<div id="resultado" class="lightbox">
@@ -76,8 +73,8 @@
 		function jugada(ele)
 		{
 			var jugadas = ["piedra","papel","tijera","lagarto","spock"];
-			//var jugadas = ["piedra"];
-			var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
+			//var pc_jugada = jugadas[Math.floor((Math.random() * 2))];
+			var pc_jugada = 'lagarto';
 			switch (ele.id) 
 			{
 				case 'piedra':
@@ -89,6 +86,12 @@
 						break;
 						case 'papel':
 								resJugada('649px','../img/ganaSheldon.jpg','Sheldon gana!');		
+						break;
+						case 'tijera':
+								resJugada('790px','../img/pierdeSheldon.jpg','Has ganado a Sheldon!');		
+						break;
+						case 'lagarto':
+								resJugada('223px','../img/pierdeSheldon.jpg','Has ganado a Sheldon!');		
 						break;
 
 					}
