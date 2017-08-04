@@ -17,12 +17,12 @@ header:first-child { padding: 0px;
 		}
 
 #tit { 
-	   width: 98%; height: 190px;
+	   width: 98%; height: 150px;
 	   border-bottom: white solid 2px;
 	   padding: 0px 0px 0px 20px;
 	   font-family: 'Handlee', cursive;
 	   position: relative;
-	   background: url('../img/cabimg.png') no-repeat;
+	   background: url('../img/cabimg.png') 0px no-repeat;
 	}
 
 .barratit {
