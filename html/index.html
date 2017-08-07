@@ -12,7 +12,9 @@
 <body>
 	<div id="cuerpo">
 		<header>
-		<div id="tit"></div>
+		<div id="tit">
+			
+		</div>
 		</header>
 		<div class="fondo"></div>
 		<div id="resultado" class="lightbox">
@@ -23,14 +25,17 @@
 			<br>
 			<div class="marco">
 				<div id="sheldon"></div>
-				<br>
 				<div class="marcotxt">Sheldon</div>
 			</div>
 			<div class="marco">
 				<div id="jugador"></div>
-				<br>
 				<div class="marcotxt">Tú</div>
 			</div>			
+		</div>
+		<div class="puntos">
+				Sheldon<span id="ptssheldon"></span>
+				<hr>
+				Tú<span id="ptstu"></span>
 		</div>
 		<main>
 			<div class="elige">Elige tu jugada:</div>
@@ -49,6 +54,10 @@
 		const pierdes = "Ha ganado Sheldon!";
 		const empate = "Habeis empatado!";
 
+		var ptssheldon = 0
+		var ptstu = 0;
+		$("#ptssheldon").html(ptssheldon);
+		$("#ptstu").html(ptstu);
 		var lbox = $(".lightbox");
 		var posx = ($(window).width() -  lbox.outerWidth()) / 2;
 		var posy = ($(window).height() -  lbox.outerHeight()) / 2;
@@ -71,6 +80,8 @@
 
 		function resJugada(posFondopc,res_img,restxt)
 		{
+				$("#ptssheldon").html(ptssheldon);
+				$("#ptstu").html(ptstu);
 				$(".imgsheldon").attr("src", res_img);
 				$(".txtres").html(restxt);
 				sheldon.css("background","url('../img/iconos.png') " + posFondopc);
@@ -87,19 +98,25 @@
 					switch (pc_jugada)
 					{
 						case 'piedra':
-								resJugada('508px','../img/empate.png', empate);					
+								resJugada('508px','../img/empate.png', empate);	
+								ptssheldon ++;
+								ptstu ++;
 						break;
 						case 'papel':
-								resJugada('649px','../img/ganaSheldon.jpg', pierdes);		
+								resJugada('649px','../img/ganaSheldon.jpg', pierdes);
+								ptssheldon ++;									
 						break;
 						case 'tijera':
-								resJugada('790px','../img/pierdeSheldon.png',ganas);		
+								resJugada('790px','../img/pierdeSheldon.png',ganas);	
+								ptstu ++;
 						break;
 						case 'lagarto':
 								resJugada('366px','../img/pierdeSheldon.png',ganas);
+								ptstu ++;						
 						break;
 						case 'spock':
 								resJugada('223px','../img/ganaSheldon.jpg', pierdes);
+								ptssheldon ++;
 						break;
 					}
 

@@ -16,8 +16,8 @@
 {
 	background-color: white;
 	border: 4px solid black !important;
-	border-top-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-top-left-radius: 10%;
+	border-bottom-right-radius: 10%;
 	width: 600px;
 	height: 500px;
 	position: absolute;
