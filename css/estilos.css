@@ -12,7 +12,7 @@ header:first-child { padding: 0px;
 		   	margin: 10px auto;
 		   	background-color: #80b3ff;
 		   	box-shadow: 1px 4px 4px 4px rgba(0,0,0,0.2);
-		   	text-align: center;
+		   	text-align: left;
 		  	}
 
 #tit { 
@@ -23,7 +23,7 @@ header:first-child { padding: 0px;
 	   font-family: 'Handlee', cursive;
 	   background-color: #06246f !important;
 	   background: url('../img/cabimg.png')  no-repeat;
-	   background-size: 70%;
+	   background-size: 95%;
 	}
 
 .barratit {
@@ -49,7 +49,7 @@ header:first-child { padding: 0px;
 		z-index: 2;
 }
 
-main { margin: 60px auto; 
+main { margin: 50px auto;
 	   width: 800px;
 	   border: 8px solid white;
 	   height: 200px;
@@ -107,7 +107,9 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 						 cursor: move;
 						 }	
 hr { color white;
-	 box-shadow: 1px 1px 1px rgba(0,0,0,0.6); }
+	 box-shadow: 1px 1px 1px rgba(0,0,0,0.6); 
+	 padding: 0px;
+	 margin: 0px; }
 
 .marco {
 			
@@ -129,7 +131,7 @@ hr { color white;
 
 .puntos {	
 			width: 150px;
-			min-height:70px;
+			height:90px;
 			border: #a85605 3px solid;
 			background: url("../img/pizarra.jpg");
 			background-size: 89%;
@@ -137,15 +139,16 @@ hr { color white;
 		    font-weight: bold;
 			color: white;
 			font-family: "Handlee";
-			margin: 50px auto 0px;
-			padding: 5px;
+			margin: 30px 15px 0px 0px;
+			float: right;
+			padding: 12px;
 			text-align: left;
 			box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 		}
 
 .puntos span { float: left; }
 
-#ptssheldon, #ptstu { float: right; 
+#ptssheldon, #ptstu, #ronda { float: right; 
 					  margin-right: 10px;}
 
 

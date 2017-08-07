@@ -13,7 +13,13 @@
 	<div id="cuerpo">
 		<header>
 		<div id="tit">
-			
+			<div class="puntos">
+				Sheldon<span id="ptssheldon"></span>
+				<hr>
+				Tú<span id="ptstu"></span>
+				<hr>
+				Ronda<span id="ronda"></span>
+			</div>
 		</div>
 		</header>
 		<div class="fondo"></div>
@@ -31,12 +37,7 @@
 				<div id="jugador"></div>
 				<div class="marcotxt">Tú</div>
 			</div>			
-		</div>
-		<div class="puntos">
-				Sheldon<span id="ptssheldon"></span>
-				<hr>
-				Tú<span id="ptstu"></span>
-		</div>
+		</div>	
 		<main>
 			<div class="elige">Elige tu jugada:</div>
 			<br>
@@ -46,6 +47,7 @@
 			<button id="lagarto"></button>
 			<button id="spock"></button>
 		</main>
+	
 	</div>
 <script>
 	$(document).ready(function(){
@@ -54,6 +56,8 @@
 		const pierdes = "Ha ganado Sheldon!";
 		const empate = "Habeis empatado!";
 
+		var ronda = 0;
+		$("#ronda").html(ronda);
 		var ptssheldon = 0
 		var ptstu = 0;
 		$("#ptssheldon").html(ptssheldon);
@@ -65,7 +69,12 @@
 		$(".fondo,.lightbox").hide();
 	  	$(".close").click(function(){
 	  		$(".fondo,.lightbox").fadeOut("fast");
-	  		}); 
+	  		if (ronda == 2)
+	  		{
+	  			$("#resultado").html("Felicidades!! " + ganas);
+	  			$(".fondo,.lightbox").fadeIn("fast");
+	  		}
+	  	}); 
 
 		var sheldon = $('#sheldon');
 		var jugador = $('#jugador');
@@ -73,6 +82,8 @@
 		
 		$('button').click(function(){
 
+			 ronda ++;
+			 $("#ronda").html(ronda);
 			 jugada(this);
 			 $(".fondo,.lightbox").fadeIn("fast");
 
@@ -98,25 +109,29 @@
 					switch (pc_jugada)
 					{
 						case 'piedra':
-								resJugada('508px','../img/empate.png', empate);	
 								ptssheldon ++;
 								ptstu ++;
+								resJugada('508px','../img/empate.png', empate);	
+								
 						break;
 						case 'papel':
+								ptssheldon ++;
 								resJugada('649px','../img/ganaSheldon.jpg', pierdes);
-								ptssheldon ++;									
+																
 						break;
 						case 'tijera':
-								resJugada('790px','../img/pierdeSheldon.png',ganas);	
 								ptstu ++;
+								resJugada('790px','../img/pierdeSheldon.png',ganas);	
+								
 						break;
 						case 'lagarto':
+								ptstu ++;
 								resJugada('366px','../img/pierdeSheldon.png',ganas);
-								ptstu ++;						
+														
 						break;
 						case 'spock':
-								resJugada('223px','../img/ganaSheldon.jpg', pierdes);
 								ptssheldon ++;
+								resJugada('223px','../img/ganaSheldon.jpg', pierdes);
 						break;
 					}
 
