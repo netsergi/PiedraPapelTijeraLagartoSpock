@@ -17,13 +17,12 @@ header:first-child { padding: 0px;
 
 #tit { 
 	   width: auto;
-	   height: 175px;
+	   height: 200px;
 	   border-bottom: white solid 4px;
 	   padding: 0px 0px 0px 20px;
 	   font-family: 'Handlee', cursive;
 	   background-color: #06246f !important;
-	   background: url('../img/cabimg.png')  no-repeat;
-	   background-size: 95%;
+	   background: url('../img/cabimg2.png')  no-repeat;
 	}
 
 .barratit {
@@ -49,7 +48,7 @@ header:first-child { padding: 0px;
 		z-index: 2;
 }
 
-main { margin: 50px auto;
+main { margin: 100px auto;
 	   width: 800px;
 	   border: 8px solid white;
 	   height: 200px;
@@ -139,7 +138,7 @@ hr { color white;
 		    font-weight: bold;
 			color: white;
 			font-family: "Handlee";
-			margin: 30px 15px 0px 0px;
+			margin: 30px 50px 0px 0px;
 			float: right;
 			padding: 12px;
 			text-align: left;

@@ -67,6 +67,7 @@
 		var posy = ($(window).height() -  lbox.outerHeight()) / 2;
 		lbox.css({left: + posx, top: + posy});
 		$(".fondo,.lightbox").hide();
+
 	  	$(".close").click(function(){
 	  		$(".fondo,.lightbox").fadeOut("fast");
 	  		if (ronda == 2)
@@ -85,6 +86,7 @@
 			 ronda ++;
 			 $("#ronda").html(ronda);
 			 jugada(this);
+			 $(".fondo,.lightbox").css("visibility","visible");
 			 $(".fondo,.lightbox").fadeIn("fast");
 
 		});
