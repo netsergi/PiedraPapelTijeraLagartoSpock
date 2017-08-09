@@ -11,7 +11,6 @@
 </head>
 <body>
 	<div id="cuerpo">
-		<header>
 		<div id="tit">
 			<div class="puntos">
 				Sheldon<span id="ptssheldon"></span>
@@ -21,7 +20,6 @@
 				Ronda<span id="ronda"></span>
 			</div>
 		</div>
-		</header>
 		<div class="fondo"></div>
 		<div id="resultado" class="lightbox">
 			<span class="close">X</span>
@@ -46,15 +44,25 @@
 			<button id="tijera"></button>
 			<button id="lagarto"></button>
 			<button id="spock"></button>
+			<br><br>
 		</main>
-	
+		<br>
+		<div class="instrucciones">
+			<p> Instrucciones: </p>
+			<p>
+				Las <b>tijeras</b> cortan el papel, el papel cubre a la piedra, la piedra aplasta al lagarto, el lagarto envenena a Spock, Spock destroza las tijeras, las tijeras decapitan al lagarto, el lagarto se come el papel, el papel refuta a Spock, Spock vaporiza la piedra, y la piedra aplasta las tijeras.
+			</p>
+			<img src="../img/reglas.jpg" />
+			<br><br>
+		</div>
+	<br>
 	</div>
 <script>
 	$(document).ready(function(){
 
 		const ganas = "Has ganado a Sheldon!";
 		const pierdes = "Ha ganado Sheldon!";
-		const empate = "Habeis empatado!";
+		const empate = "Empate!";
 
 		var ronda = 0;
 		$("#ronda").html(ronda);
@@ -69,11 +77,11 @@
 		$(".fondo,.lightbox").hide();
 
 	  	$(".close").click(function(){
-	  		$(".fondo,.lightbox").fadeOut("fast");
-	  		if (ronda == 2)
+	  		$(".fondo,.lightbox").fadeOut("slow");
+	  		if (ronda == 20)
 	  		{
 	  			$("#resultado").html("Felicidades!! " + ganas);
-	  			$(".fondo,.lightbox").fadeIn("fast");
+	  			$(".fondo,.lightbox").fadeIn("slow");
 	  		}
 	  	}); 
 
@@ -87,18 +95,18 @@
 			 $("#ronda").html(ronda);
 			 jugada(this);
 			 $(".fondo,.lightbox").css("visibility","visible");
-			 $(".fondo,.lightbox").fadeIn("fast");
+			 $(".fondo,.lightbox").fadeIn("slow");
 
 		});
 
-		function resJugada(posFondopc,res_img,restxt)
+		function resJugada(iconoPC, iconoJUG, res_img,restxt)
 		{
 				$("#ptssheldon").html(ptssheldon);
 				$("#ptstu").html(ptstu);
 				$(".imgsheldon").attr("src", res_img);
 				$(".txtres").html(restxt);
-				sheldon.css("background","url('../img/iconos.png') " + posFondopc);
-				jugador.css("background","url('../img/iconos.png') 508px");
+				sheldon.css("background","url('../img/iconos.png') " + iconoPC);
+				jugador.css("background","url('../img/iconos.png') " + iconoJUG); 
 		}
 
 		function jugada(ele)
@@ -113,30 +121,153 @@
 						case 'piedra':
 								ptssheldon ++;
 								ptstu ++;
-								resJugada('508px','../img/empate.png', empate);	
+								resJugada('508px','508px','../img/empate.png', empate);	
 								
 						break;
 						case 'papel':
 								ptssheldon ++;
-								resJugada('649px','../img/ganaSheldon.jpg', pierdes);
+								resJugada('649px', '508px','../img/ganaSheldon.jpg', pierdes);
 																
 						break;
 						case 'tijera':
 								ptstu ++;
-								resJugada('790px','../img/pierdeSheldon.png',ganas);	
+								resJugada('790px', '508px','../img/pierdeSheldon.png',ganas);	
 								
 						break;
 						case 'lagarto':
 								ptstu ++;
-								resJugada('366px','../img/pierdeSheldon.png',ganas);
+								resJugada('366px', '508px','../img/pierdeSheldon.png',ganas);
 														
 						break;
 						case 'spock':
 								ptssheldon ++;
-								resJugada('223px','../img/ganaSheldon.jpg', pierdes);
+								resJugada('223px', '508px','../img/ganaSheldon.jpg', pierdes);
 						break;
 					}
+				break;
 
+				case 'papel':
+					switch (pc_jugada)
+					{
+						case 'piedra':
+								ptstu ++;
+								resJugada('508px', '649px','../img/pierdeSheldon.png', ganas);	
+								
+						break;
+						case 'papel':
+								ptssheldon ++;
+								ptstu ++;
+								resJugada('649px', '649px','../img/empate.png', empate);
+																
+						break;
+						case 'tijera':
+								ptssheldon ++;
+								resJugada('790px', '649px','../img/ganaSheldon.jpg',pierdes);	
+								
+						break;
+						case 'lagarto':
+								ptssheldon ++;
+								resJugada('366px', '649px','../img/ganaSheldon.png', pierdes);
+														
+						break;
+						case 'spock':
+								ptstu ++;
+								resJugada('223px', '649px','../img/pierdeSheldon.png', ganas);
+						break;
+					}
+				break;
+
+				case 'tijera':
+					switch (pc_jugada)
+					{
+						case 'piedra':
+								ptssheldon ++;
+								resJugada('508px', '790px','../img/ganaSheldon.jpg', pierdes);	
+									
+						break;
+						case 'papel':
+								ptstu ++;
+								resJugada('649px', '790px','../img/pierdeSheldon.png', ganas);
+																	
+						break;
+						case 'tijera':
+								ptssheldon ++;
+								ptstu ++;
+								resJugada('790px', '790px','../img/empate.png', empate);	
+									
+						break;
+						case 'lagarto':
+								ptstu ++;
+								resJugada('366px', '790px','../img/pierdeSheldon.png', ganas);
+															
+						break;
+						case 'spock':
+								ptssheldon ++;
+								resJugada('223px', '790px','../img/ganaSheldon.jpg', pierdes);
+						break;
+					}
+				break;
+
+				case 'lagarto':
+					switch (pc_jugada)
+					{
+						case 'piedra':
+								ptssheldon ++;
+								resJugada('508px', '366px','../img/ganaSheldon.jpg', pierdes);	
+									
+						break;
+						case 'papel':
+								ptstu ++;
+								resJugada('649px', '366px','../img/pierdeSheldon.png', ganas);
+																	
+						break;
+						case 'tijera':
+								ptssheldon ++;
+								resJugada('790px', '366px','../img/ganaSheldon.jpg', pierdes);	
+									
+						break;
+						case 'lagarto':
+								ptstu ++;
+								ptssheldon ++;
+								resJugada('366px', '366px','../img/empate.png', empate);
+															
+						break;
+						case 'spock':
+								ptstu ++;
+								resJugada('223px', '366px','../img/pierdeSheldon.png', ganas);
+						break;
+					}
+				break;
+
+				case 'spock':
+					switch (pc_jugada)
+					{
+						case 'piedra':
+								ptstu ++;
+								resJugada('508px', '223px','../img/pierdeSheldon.png', ganas);	
+									
+						break;
+						case 'papel':
+								ptssheldon ++;
+								resJugada('649px', '223px','../img/pierdeSheldon.png', pierdes);
+																	
+						break;
+						case 'tijera':
+								ptstu ++;
+								resJugada('790px', '223px','../img/ganaSheldon.jpg', ganas);	
+									
+						break;
+						case 'lagarto':
+								ptssheldon ++;
+								resJugada('366px', '223px','../img/ganaSheldon.jpg', pierdes);
+															
+						break;
+						case 'spock':
+								ptstu ++;
+								ptssheldon ++;
+								resJugada('223px', '223px','../img/empate.png', empate);
+						break;
+					}
 				break;
 			}
 		}
