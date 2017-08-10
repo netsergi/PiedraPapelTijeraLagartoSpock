@@ -1,5 +1,9 @@
 body { margin: 0; }
 
+td { height: auto;
+	 padding-right: 15px; }
+
+table { width: 100%; }
 
 #cuerpo { 	width: 80%; 
 			border: 8px solid white;
@@ -18,7 +22,7 @@ body { margin: 0; }
 	   font-family: 'Handlee', cursive;
 	   background-color: #104de6 !important;
 	   background: url('../img/cabimg2.png')  no-repeat;
-	   background-size: 80%;
+	   background-size: 90%;
 	   margin-bottom: 50px;
 	}
 
@@ -47,7 +51,7 @@ body { margin: 0; }
 
 main, .instrucciones { 
 	   margin: 0 auto;
-	   width: 60%;
+	   width: 80%;
 	   border: 8px solid white;
 	   height: auto;
 	   text-align: center;
@@ -148,7 +152,7 @@ hr { color white; }
 
 .puntos {	
 			width: 20%;
-			height: 166px;
+			height: 80%;
 			border: #a85605 5px solid;
 			background: url("../img/pizarra.jpg");
 			background-size: 89%;
@@ -200,8 +204,13 @@ hr { color white; }
 		  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 		}
 
-span { display: block; 
-	  }
+.final { 
+		  width: 300px;
+		  height: 400px;
+		  background-color: white;
+ }
+
+ span { display: block; }
 
 .txtres {
 			background-color: blue;

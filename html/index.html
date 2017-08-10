@@ -13,11 +13,27 @@
 	<div id="cuerpo">
 		<div id="tit">
 			<div class="puntos">
-				Sheldon<span id="ptssheldon"></span>
-				<hr>
-				Tú<span id="ptstu"></span>
-				<hr>
-				Ronda<span id="ronda"></span>
+				<table>
+					<tr>
+						<td>Sheldon</td>
+						<td><span id="ptssheldon"</span></td>
+
+					</tr>
+					<tr>
+					<td colspan="3"><hr></td>
+					</tr>
+					<tr>
+						<td>Tú</td>
+						<td><span id="ptstu"</span></td>
+					</tr>
+					<tr>
+					<td colspan="3"><hr></td>
+					</tr
+					<tr>
+						<td>Ronda</td>
+						<td><span id="ronda"</span></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<div class="fondo"></div>
@@ -71,17 +87,21 @@
 		$("#ptssheldon").html(ptssheldon);
 		$("#ptstu").html(ptstu);
 		var lbox = $(".lightbox");
-		var posx = ($(window).width() -  lbox.outerWidth()) / 2;
-		var posy = ($(window).height() -  lbox.outerHeight()) / 2;
-		lbox.css({left: + posx, top: + posy});
+		function centrardiv()
+		{
+			var posx = ($(window).width() -  lbox.outerWidth()) / 2;
+			var posy = ($(window).height() -  lbox.height()) / 2;
+			lbox.css({left: + posx, top: + posy});
+		}
+		centrardiv();
+		$(window).resize(centrardiv());
 		$(".fondo,.lightbox").hide();
 
 	  	$(".close").click(function(){
 	  		$(".fondo,.lightbox").fadeOut("slow");
-	  		if (ronda == 20)
+	  		if (ronda == 4)
 	  		{
-	  			$("#resultado").html("Felicidades!! " + ganas);
-	  			$(".fondo,.lightbox").fadeIn("slow");
+	 			
 	  		}
 	  	}); 
 
@@ -98,6 +118,14 @@
 			 $(".fondo,.lightbox").fadeIn("slow");
 
 		});
+
+
+		$('.lightbox').click(function(){
+			$(".lightbox, .fondo").fadeOut("slow");
+
+		});
+
+
 
 		function resJugada(iconoPC, iconoJUG, res_img,restxt)
 		{
