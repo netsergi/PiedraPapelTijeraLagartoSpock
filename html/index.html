@@ -20,15 +20,9 @@
 
 					</tr>
 					<tr>
-					<td colspan="3"><hr></td>
-					</tr>
-					<tr>
 						<td>Tú</td>
 						<td><span id="ptstu"</span></td>
 					</tr>
-					<tr>
-					<td colspan="3"><hr></td>
-					</tr
 					<tr>
 						<td>Ronda</td>
 						<td><span id="ronda"</span></td>
@@ -87,6 +81,7 @@
 		$("#ptssheldon").html(ptssheldon);
 		$("#ptstu").html(ptstu);
 		var lbox = $(".lightbox");
+		var finalbox = $("#final")
 		function centrardiv()
 		{
 			var posx = ($(window).width() -  lbox.outerWidth()) / 2;
@@ -98,11 +93,15 @@
 		$(".fondo,.lightbox").hide();
 
 	  	$(".close").click(function(){
-	  		$(".fondo,.lightbox").fadeOut("slow");
-	  		if (ronda == 4)
+	  		
+	  		if (ronda == 1)
 	  		{
-	 			
-	  		}
+	 			$("main").html("Has ganado a SHeldon!");
+	 		}
+	 		else
+	 		{
+	 			$(".fondo,.lightbox").fadeOut("slow");
+	 		}
 	  	}); 
 
 		var sheldon = $('#sheldon');
