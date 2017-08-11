@@ -12,7 +12,7 @@ table { width: auto;
 		   	margin: 10px auto;
 		   	background-color: #336bf8;
 		   	box-shadow: 1px 4px 4px 4px rgba(0,0,0,0.2);
-		   	text-align: left;
+		   	text-align: center;
 		  	}
 
 #tit { 
@@ -37,7 +37,6 @@ table { width: auto;
 			min-height: 100px;
 			border-radius: 20px;
 			border: 5px solid white;
-			box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 			margin: 20px 0px 0px 200px;
 }
 
@@ -50,13 +49,15 @@ table { width: auto;
 		z-index: 2;
 }
 
+#imgfinal, main, .instrucciones, .barratit { box-shadow: 2px 2px 2px rgba(0,0,0,0.2); }
+
+
 main, .instrucciones { 
 	   margin: 0 auto;
 	   width: 80%;
 	   border: 8px solid white;
 	   height: auto;
 	   text-align: center;
-	   box-shadow: 3px 3px 3px  rgba(0,0,0,0.5);
 	   background-color: #d5e5ff;
 	   position: relative;
 	 }
@@ -72,7 +73,6 @@ main, .instrucciones {
 
 .instrucciones p+img {
 	border: 5px solid white;
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 	border-radius: 5%;
 }
 
@@ -153,12 +153,16 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 
 .boton {
 			background-color: green;
-			border-radius: 5%;
-			width: 20%;
+			border-radius: 20px;
+			width: 150px;
 			color: white;
-			height: auto;
-			position: relative;
-			float: left;
+			font-family: "Handlee";
+			font-size: 20px;
+			font-weight: bold;
+			padding: 5px;
+			border: 3px solid white;
+			display: inline-block;
+			cursor: pointer;
 }
 
 .puntos {	
@@ -218,7 +222,6 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 
 
  span { display: block; }
-}
 
 .txtres {
 			background-color: blue;

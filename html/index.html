@@ -17,7 +17,6 @@
 					<tr>
 						<td>Sheldon</td>
 						<td><span id="ptssheldon"</span></td>
-
 					</tr>
 					<tr>
 						<td>Tú</td>
@@ -46,6 +45,11 @@
 				<div class="marcotxt">Tú</div>
 			</div>			
 		</div>	
+		<div class="final">
+			<img id="imgfinal" src="#" />
+			<br><br>
+			<span onclick="location.reload();" class="boton">Volver a jugar</span>
+		</div>
 		<main>
 			<div class="elige">Elige tu jugada:</div>
 			<br>
@@ -60,7 +64,7 @@
 		<div class="instrucciones">
 			<p> Instrucciones: </p>
 			<p>
-				Las <b>tijeras</b> cortan el papel, el papel cubre a la piedra, la piedra aplasta al lagarto, el lagarto envenena a Spock, Spock destroza las tijeras, las tijeras decapitan al lagarto, el lagarto se come el papel, el papel refuta a Spock, Spock vaporiza la piedra, y la piedra aplasta las tijeras.
+				Las tijeras cortan el papel, el papel cubre a la piedra, la piedra aplasta al lagarto, el lagarto envenena a Spock, Spock destroza las tijeras, las tijeras decapitan al lagarto, el lagarto se come el papel, el papel refuta a Spock, Spock vaporiza la piedra, y la piedra aplasta las tijeras.
 			</p>
 			<img src="../img/reglas.jpg" />
 			<br><br>
@@ -81,7 +85,6 @@
 		$("#ptssheldon").html(ptssheldon);
 		$("#ptstu").html(ptstu);
 		var lbox = $(".lightbox");
-		var finalbox = $("#final")
 		function centrardiv()
 		{
 			var posx = ($(window).width() -  lbox.outerWidth()) / 2;
@@ -90,19 +93,9 @@
 		}
 		centrardiv();
 		$(window).resize(centrardiv());
-		$(".fondo,.lightbox").hide();
+	  
 
-	  	$(".close").click(function(){
-	  		
-	  		if (ronda == 1)
-	  		{
-	 			$("main").html("Has ganado a SHeldon!");
-	 		}
-	 		else
-	 		{
-	 			$(".fondo,.lightbox").fadeOut("slow");
-	 		}
-	  	}); 
+		$(".fondo,.lightbox,.final").hide();
 
 		var sheldon = $('#sheldon');
 		var jugador = $('#jugador');
@@ -118,10 +111,19 @@
 
 		});
 
+		function gameover()
+		{
+			if (ronda == 1)
+	  		{
+	 			$("#imgfinal").attr("src","../img/ganas.png");
+	 			$(".instrucciones,main").hide("slow");
+	 			$(".final").fadeIn("slow");
+	 		}
+	 			$(".fondo,.lightbox").fadeOut("slow");
+		}
 
 		$('.lightbox').click(function(){
-			$(".lightbox, .fondo").fadeOut("slow");
-
+				gameover()
 		});
 
 
