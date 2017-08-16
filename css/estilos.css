@@ -1,100 +1,122 @@
-body { margin: 0; }
+body { 
+		margin: 0;
+	 }
 
-td { height: auto;
-	 padding-right: 15px; }
+td { 
+		height: auto;
+	 	padding-right: 15px;
+   }
 
-table { width: auto; 
-		min-width: 100%;}
+table { 
+			width: auto; 
+			min-width: 100%;
+	  }
 
-#cuerpo { 	width: 80%; 
+
+#cuerpo { 	
+			width: 80%; 
 			border: 8px solid white;
 			height: auto; 
 		   	margin: 10px auto;
 		   	background-color: #336bf8;
 		   	box-shadow: 1px 4px 4px 4px rgba(0,0,0,0.2);
 		   	text-align: center;
-		  	}
+		}
 
 #tit { 
-	   width: auto;
-	   height: 200px;
-	   border-bottom: white solid 4px;
-	   padding: 0px 0px 0px 20px;
-	   font-family: 'Handlee', cursive;
-	   background-color: #104de6 !important;
-	   background: url('../img/cabimg2.png')  no-repeat;
-	   background-size: 85%;
-	   margin-bottom: 50px;
-	}
+	  	width: auto;
+	   	height: 200px;
+	   	border-bottom: white solid 4px;
+	   	padding: 0px 0px 0px 20px;
+	   	font-family: 'Handlee', cursive;
+	   	background-color: #104de6 !important;
+	   	background: url('../img/cabimg2.png')  no-repeat;
+	   	background-size: 85%;
+	   	margin-bottom: 50px;
+	 }
+
+
 
 .barratit {
-			background-color: yellow;
-			position: absolute;
-			margin: 20px 0px 0px 100px;
-			width: 400px;
-			height: 100px;
-			padding: 5px;
-			min-height: 100px;
-			border-radius: 20px;
-			border: 5px solid white;
-			margin: 20px 0px 0px 200px;
-}
+				background-color: yellow;
+				position: absolute;
+				margin: 20px 0px 0px 100px;
+				width: 400px;
+				height: 100px;
+				padding: 5px;
+				min-height: 100px;
+				border-radius: 20px;
+				border: 5px solid white;
+				margin: 20px 0px 0px 200px;
+		  }
 
 .imgtit {
 
-		float:left;
-		display: inline;
-		left: 0px;
-		position: absolute;
-		z-index: 2;
-}
+			float:left;
+			display: inline;
+			left: 0px;
+			position: absolute;
+			z-index: 2;
+		}
 
-#imgfinal, main, .instrucciones, .barratit { box-shadow: 2px 2px 2px rgba(0,0,0,0.2); }
+#imgfinal, main, .instrucciones, .barratit {
+			 box-shadow: 2px 2px 2px rgba(0,0,0,0.6); 
+		}
 
+#imgfinal { 
+				border: 4px solid white; 
+		  }
 
-main, .instrucciones { 
-	   margin: 0 auto;
-	   width: 80%;
-	   border: 8px solid white;
-	   height: auto;
-	   text-align: center;
-	   background-color: #d5e5ff;
-	   position: relative;
-	 }
+main, .instrucciones 
+		 { 
+			   margin: 0 auto;
+			   width: 80%;
+			   border: 8px solid white;
+			   height: auto;
+			   text-align: center;
+			   background-color: #d5e5ff;
+			   position: relative;
+	 	 }
 
-.instrucciones p:first-child {
-	background-color: #87de87;
-	text-align: center;
-	font-size: 20px;
-	color: black;
-	margin: 0;
-	padding: 8px;
-}
+.instrucciones p:first-child 
+		{
+			background-color: #87de87;
+			text-align: center;
+			font-size: 35px;
+			color: black;
+			margin: 0;
+			padding: 0;
+		}
 
-.instrucciones p+img {
-	border: 5px solid white;
-	border-radius: 5%;
-}
+.instrucciones p:first-child, .elige 
+		{
+			font-family: 'Handlee', cursive;
+			font-weight: bold;
+			font-size: 35px;
+			text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+			color: yellow;
+		}
 
+.instrucciones p+img 
+		{
+			border: 5px solid white;
+			border-radius: 5%;
+		}
 
-p { padding: 10px;
+p { 
+	padding: 10px;
 	font-family: "Handlee";
 	font-size: 20px;
 	font-weight: bold;
-	text-align: justify; }
+	text-align: justify;
+  }
 
 
 .elige {	
 			width: 100%;
 			height: 50px;
-			font-family: 'Handlee', cursive;
-			font-weight: bold;
-			font-size: 35px;
-			text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 			background-color: #80b3ff;
-			color: yellow;
-
-}
+	   }
 
 .imgsheldon {
 				margin-top: 10px;
@@ -103,26 +125,32 @@ p { padding: 10px;
 				border: white solid 6px;
 				border-radius: 5%; 
 				box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
-}
+			}
 
-button { width: 137px; 
-		 height: 135px; 
-		 border-radius: 80px; 
-		 box-shadow: 5px 5px 8px rgba(0,0,0,0.4); 
-		 border: none;
-		 margin: 0px 10px 0px 8px;}
+button { 
+			 width: 137px; 
+			 height: 135px; 
+			 border-radius: 80px; 
+			 box-shadow: 5px 5px 8px rgba(0,0,0,0.4); 
+			 border: none;
+			 margin: 0px 10px 0px 8px;
+		}
 
 button:focus { outline: 0px; }
 
 div main { text-align: center; }
 
-div main button { filter: grayscale(20%); 
-				  transition: All linear 0.2s; }
+div main button { 
+		   filter: grayscale(20%); 
+	       transition: All linear 0.2s; 
+				}
 
-div main img { width: 100;
-			   height: 80;
-			   margin-bottom: 30px; 
-			   text-align: center;}
+div main img { 
+				width: 100;
+				height: 80;
+		        margin-bottom: 30px; 
+		   	    text-align: center;
+		   	}
 
 
 div main button:hover { transform: rotate(20deg);
@@ -234,4 +262,29 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 			color: white;
 			width: 400px;
 			margin: 0 auto;
+}
+
+
+@media screen and (max-width:700px) {
+
+		.lightbox { 
+					width: 100%; 
+					position: absolute;
+					float: left;
+				  }
+
+		#cuerpo { 
+				  width: 100%; 
+				  margin: 0;
+				  border: 0;
+				}
+
+		#tit { height: 100px;}
+
+		.puntos { 
+				  font-size: 15px;
+				  margin-top: 5px;  }
+
+		#imgsheldon { width: 100%; }
+
 }
