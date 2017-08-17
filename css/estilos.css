@@ -265,7 +265,7 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 768px) {
 
 		.lightbox { 
 					width: 100%; 
@@ -279,12 +279,13 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 				  border: 0;
 				}
 
+		.txtres { font-size: 28px; }
+
 		#tit { height: 100px;}
 
 		.puntos { 
 				  font-size: 15px;
-				  margin-top: 5px;  }
+				  margin: 5px 20px 0px 0px;  }
 
 		#imgsheldon { width: 100%; }
-
 }

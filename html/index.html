@@ -97,12 +97,12 @@
 		function centrardiv()
 		{
 			var posx = ($(window).width() -  lbox.outerWidth()) / 2;
-			var posy = ($(window).height() -  lbox.height()) / 2;
-			lbox.css({left: + posx, top: + posy, position: 'absolute'});
+			var posy = ($(window).height() - lbox.height()) /2.5; 
+			lbox.css({left: + posx, top: + posy});
 		}
 		//-------------------------------------------------------------------------------
 		centrardiv();
-		$(window).resize(centrardiv());
+		$(window).scroll(centrardiv());
 		$(".fondo,.lightbox,.final").hide();
 		//-------------------------------------------------------------------------------
 		$('button').click(function(){
