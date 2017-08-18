@@ -267,11 +267,6 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 
 @media screen and (max-width: 768px) {
 
-		.lightbox { 
-					width: 100%; 
-					position: absolute;
-					float: left;
-				  }
 
 		#cuerpo { 
 				  width: 100%; 
@@ -279,13 +274,21 @@ div main button:active { box-shadow: 1px 1px 1px #ccc;
 				  border: 0;
 				}
 
-		.txtres { font-size: 28px; }
+		main, .instrucciones { width: 85%;  }
 
-		#tit { height: 100px;}
+		.txtres { padding: 2px; 
+				  width: 80%;
+				  font-size: 28px;}
+
+		#tit { height: 100px;
+			   background-size: 120%; }
+
+		.puntos span { padding: 0; }
 
 		.puntos { 
 				  font-size: 15px;
-				  margin: 5px 20px 0px 0px;  }
+				  margin: 5px 10px 0px 0px; 
+				  width: 30%;}
 
 		#imgsheldon { width: 100%; }
 }
